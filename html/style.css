@@ -16,11 +16,13 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   width: 100%;
   font-family: Pretendard;
   min-width: 375px;
+  overflow-x: hidden;
 }
 
 header {
@@ -128,22 +130,10 @@ section:not(.bottom):nth-of-type(even) {
   height: 100%;
 }
 
-section:nth-of-type(even) > .box-txt {
-  text-align: right;
-}
-
 .box-txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.box-txt:nth-of-type(odd) {
-  align-items: left;
-}
-
-.box-txt:nth-of-type(even) {
-  align-items: right;
 }
 
 .box-txt > h2 {
@@ -230,7 +220,7 @@ footer > div {
 
 .snsicons > li {
   float: left;
-  margin-left: 4px;
+  margin-left: 12px;
 }
 
 .snsicons img {
@@ -333,6 +323,114 @@ input:focus {
   text-align: center;
 }
 
-@media (width >= 1200px) {}
-@media (1199px > width >= 768px) {}
-@media (767px > width >= 375px) {}
+@media (width >= 1200px) {
+}
+@media (1199px > width >= 768px) {
+  header > nav {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero {
+    height: 771px;
+  }
+
+  .heromain {
+    height: 771px;
+    top: auto;
+    text-align: center;
+  }
+
+  .heromain > img {
+    width: 744px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heromain > h1 {
+    display: inline-block;
+    left: 0;
+    right: 0;
+    top: 84px;
+    margin-top: 0;
+  }
+
+  .heromain > h1 br {
+    display: none;
+  }
+
+  .heromain > a {
+    display: inline;
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    top: 258px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .heromain button {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  section:not(.bottom):nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  section:not(.bottom) {
+    width: 696px;
+    height: 708px;
+    flex-direction: column;
+    margin: 24px auto 52px;
+    gap: 0;
+  }
+
+  .box-img {
+    width: 696px;
+    height: 524px;
+  }
+
+  .box-txt {
+    display: inline-block;
+  }
+
+  .box-txt > h3 {
+    font-size: 32px;
+  }
+
+  .box-txt > h3 br {
+    display: none;
+  }
+
+  .box-txt > p {
+    font-size: 18px;
+  }
+
+  .bottom {
+    height: 927px;
+  }
+
+  .bottom > div {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .bottom h2 {
+    text-align: center;
+    margin-bottom: 217px;
+  }
+
+  footer > div {
+    max-width: initial;
+    width: 536px;
+  }
+}
+@media (767px > width >= 375px) {
+  body {
+    display: none;
+  }
+}
