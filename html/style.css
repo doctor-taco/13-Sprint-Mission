@@ -233,16 +233,13 @@ footer > div {
 #login-box {
   width: 640px;
   margin: 231px auto 231px;
+  color: var(--gray800);
 }
 
 #login-box-logo {
   display: block;
   width: 396px;
   margin: 0 auto 40px;
-}
-
-#login-box {
-  color: var(--gray800);
 }
 
 #login-box label {
