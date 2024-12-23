@@ -52,13 +52,15 @@ header > nav {
   height: 70px;
 }
 
-header img {
-  height: 51px;
-}
-
 header a:first-of-type {
+  width: 153px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 40px;
 }
 
 header span {
