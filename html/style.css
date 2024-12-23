@@ -1,6 +1,6 @@
 @font-face {
   font-family: "ROKAF Sans";
-  src: url("font/ROKAF\ Sans\ Medium.otf");
+  src: url("font/ROKAF\ Sans\ Medium.otf") format(".otf");
 }
 
 :root {
