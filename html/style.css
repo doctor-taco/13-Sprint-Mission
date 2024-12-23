@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'ROKAF Sans';
+  src: url('font/ROKAF\ Sans\ Medium.otf');
+}
+
 :root {
   --blue: #3692ff;
   --lightblue: #cfe5ff;
@@ -15,6 +20,11 @@
 * {
   box-sizing: border-box;
 }
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 html,
 body {
@@ -46,9 +56,17 @@ header img {
   height: 51px;
 }
 
-header > a {
-  margin-left: 200px;
-  margin-right: 200px;
+header a:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  font-family: ROKAF Sans;
+  font-size: 26px;
+  font-weight: 700;
+  color: #3692ff;
+  display: inline-block;
 }
 
 button:hover {
@@ -213,7 +231,6 @@ footer > div {
   color: var(--gray200);
   font-size: 16px;
   font-weight: 400;
-  text-decoration: none;
 }
 
 .snsicons {
