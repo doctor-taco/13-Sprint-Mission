@@ -439,7 +439,6 @@ input:focus {
 
   .box-txt {
     display: inline;
-
   }
 
   .box-txt > h3 {
@@ -484,26 +483,26 @@ input:focus {
   header a:first-of-type {
     justify-content: left;
   }
-  
+
   header img {
     display: none;
   }
 
   .hero {
     height: 540px;
+    margin-bottom: 52px;
   }
 
   .heromain {
-    position: absolute;
-    height: 204px;
-    bottom:0; 
+    height: 540px;
+    top: 0;
     text-align: center;
   }
 
   .heromain > img {
     width: 448px;
+    height: 204px;
     left: 0;
-    bottom: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -512,27 +511,136 @@ input:focus {
     display: inline-block;
     left: 0;
     right: 0;
-    top: 84px;
+    top: 48px;
     margin-top: 0;
+    font-size: 32px;
+    line-height: 45px;
   }
 
   .heromain > h1 br {
-    display: none;
+    display: initial;
   }
 
   .heromain > a {
     display: inline;
     position: absolute;
-    width: 100%;
-    height: 56px;
-    top: 258px;
+    width: 240px;
+    height: 48px;
+    top: 250px;
     left: 0;
     right: 0;
     text-align: center;
+    margin: 0 auto;
   }
 
   .heromain button {
     position: relative;
     margin: 0 auto;
+    font-size: 18px;
+    padding: 12px 71px;
+    white-space: nowrap;
+  }
+
+  section:not(.bottom) {
+    width: 344px;
+    height: 417px;
+    flex-direction: column;
+    gap: 0;
+    margin: 40px auto;
+  }
+
+  section:not(.bottom):nth-of-type(even) {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .box-img {
+    width: 100%;
+    height: 259px;
+  }
+
+  .box-txt {
+    display: inline;
+  }
+
+  .box-txt > h2 {
+    font-size: 16px;
+  }
+
+  .box-txt > h3 {
+    font-size: 24px;
+  }
+
+  .box-txt > h3 br {
+    display: none;
+  }
+
+  .box-txt > p {
+    font-size: 16px;
+  }
+
+  .bottom {
+    height: 540px;
+    margin-top: 83px;
+  }
+
+  .bottom > div {
+    width: 375px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .bottom h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 131px;
+  }
+
+  .bottom img {
+    width: 375px;
+    height: 198px;
+  }
+
+  footer > div {
+    max-width: initial;
+    width: 311px;
+    height: 96px;
+    position: relative;
+    top: 32px;
+    padding-top: initial;
+  }
+
+  .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .footer-nav {
+    gap: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .footer-nav > a,
+  .snsicons {
+    white-space: nowrap;
+  }
+
+  .footer-nav > a:first-of-type {
+    margin-right: 30px;
+  }
+
+  .snsicons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
   }
 }
