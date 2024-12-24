@@ -217,11 +217,12 @@ footer {
 
 footer > div {
   max-width: 1120px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  padding: 20px 24px;
   font-size: 16px;
   font-weight: 400;
 }
@@ -472,11 +473,6 @@ input:focus {
     text-align: center;
     margin-bottom: 217px;
   }
-
-  footer > div {
-    max-width: initial;
-    width: 536px;
-  }
 }
 
 @media (767px > width) {
@@ -611,16 +607,15 @@ input:focus {
 
   footer > div {
     max-width: initial;
-    width: 311px;
     height: 96px;
     position: relative;
     top: 32px;
-    padding-top: initial;
+    padding: initial;
   }
 
   .copyright {
     position: absolute;
-    left: 0;
+    left: 16px;
     bottom: 0;
     margin: 0;
   }
@@ -629,7 +624,7 @@ input:focus {
     gap: 0;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 16px;
     margin: 0;
   }
 
@@ -645,7 +640,7 @@ input:focus {
   .snsicons {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 16px;
     margin: 0;
   }
 
@@ -660,11 +655,11 @@ input:focus {
     width: 198px;
     height: 66px;
   }
-  
+
   .login-box-logo {
     width: 52px;
   }
-  
+
   .login-box-head > span {
     font-size: 33px;
   }
@@ -672,5 +667,4 @@ input:focus {
   .login-box label {
     font-size: 14px;
   }
-  
 }
