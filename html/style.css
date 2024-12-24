@@ -366,8 +366,13 @@ input:focus {
   text-align: center;
 }
 
+.login-box > span > a {
+  text-decoration: underline;
+}
+
 @media (width >= 1200px) {
 }
+
 @media (1199px > width >= 768px) {
   header > nav {
     padding-left: 24px;
@@ -473,6 +478,7 @@ input:focus {
     width: 536px;
   }
 }
+
 @media (767px > width) {
   header > nav {
     padding-left: 16px;
@@ -642,4 +648,29 @@ input:focus {
     right: 0;
     margin: 0;
   }
+
+  .login-box {
+    max-width: 432px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .login-box-head {
+    width: 198px;
+    height: 66px;
+  }
+  
+  .login-box-logo {
+    width: 52px;
+  }
+  
+  .login-box-head > span {
+    font-size: 33px;
+  }
+
+  .login-box label {
+    font-size: 14px;
+  }
+  
 }
