@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "ROKAF Sans";
+  src: url("font/ROKAF\ Sans\ Medium.otf") format(".otf");
+}
+
+:root {
+  --blue: #3692ff;
+  --lightblue: #cfe5ff;
+  --gray50: #f9fafb;
+  --gray100: #f3f4f6;
+  --gray200: #e5e7eb;
+  --gray400: #9ca3af;
+  --gray500: #6b7280;
+  --gray600: #4b5563;
+  --gray700: #374151;
+  --gray800: #1f2937;
+  --gray900: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
