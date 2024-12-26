@@ -45,6 +45,9 @@
             name="signup-email"
             id="signup-email"
             placeholder="이메일을 입력해주세요"
+            minlength="8"
+            maxlength="50"
+            required
           />
           <label for="signup-nickname">닉네임</label>
           <input
@@ -52,6 +55,9 @@
             name="signup-nickname"
             id="signup-nickname"
             placeholder="닉네임을 입력해주세요"
+            minlength="3"
+            maxlength="20"
+            required
           />
           <label for="signup-pw">비밀번호</label>
           <div class="pw-input-box">
@@ -60,6 +66,8 @@
               name="signup-pw"
               id="signup-pw"
               placeholder="비밀번호를 입력해주세요"
+              minlength="8"
+              required
             />
             <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
           </div>
@@ -70,6 +78,8 @@
               name="signup-pwcheck"
               id="signup-pwcheck"
               placeholder="비밀번호를 다시 한 번 입력해주세요"
+              minlength="8"
+              required
             />
             <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
           </div>
