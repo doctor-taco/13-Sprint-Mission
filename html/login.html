@@ -22,21 +22,21 @@
 
   <body>
     <header>
-      <nav>
-        <a href="/">
-          <img src="img/pandaface.svg" />
-          <span>판다마켓</span>
+      <nav class="header-nav">
+        <a class="header-logo-shopname" href="/">
+          <img class="header-logo" src="img/pandaface.svg" />
+          <span class="header-shopname">판다마켓</span>
         </a>
         <a href="/login">
-          <button>로그인</button>
+          <button class="header-btn">로그인</button>
         </a>
       </nav>
     </header>
     <main>
-      <div class="login-box">
-        <div class="login-box-head">
-          <img class="login-box-logo" src="img/pandaface.svg" />
-          <span>판다마켓</span>
+      <div class="sign-box">
+        <div class="sign-box-head">
+          <img class="sign-box-logo" src="img/pandaface.svg" />
+          <span class="sign-box-shopname">판다마켓</span>
         </div>
         <form action="" method="post">
           <label for="login-email">이메일</label>
@@ -61,11 +61,11 @@
             />
             <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
           </div>
-          <button type="submit">로그인</button>
+          <button class="sign-box-submit" type="submit">로그인</button>
         </form>
         <div class="oauth-bar">
-          <h2>간편 로그인하기</h2>
-          <div>
+          <h2 class="oauth-bar-title">간편 로그인하기</h2>
+          <div class="oauth-icons">
             <a href="https://www.google.com" target="_blank">
               <img src="img/google_ico.svg" />
             </a>
@@ -74,37 +74,37 @@
             </a>
           </div>
         </div>
-        <span>
+        <span class="sign-box-bottom">
           판다마켓이 처음이신가요?
-          <a href="/signup" target="_blank">회원가입</a>
+          <a class="sign-box-bottom-link" href="/signup">회원가입</a>
         </span>
       </div>
       <footer>
-        <div>
+        <div class="footer-wrap">
           <p class="copyright">©codeit - 2024</p>
           <div class="footer-nav">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/faq">FAQ</a>
+            <a class="footer-nav-a" href="/privacy">Privacy Policy</a>
+            <a class="footer-nav-a" href="/faq">FAQ</a>
           </div>
-          <ul class="snsicons">
-            <li>
+          <ul class="footer-sns">
+            <li class="footer-sns-li">
               <a href="https://www.facebook.com" target="_blank">
-                <img src="img/ic_facebook.svg" />
+                <img class="footer-sns-ico" src="img/ic_facebook.svg" />
               </a>
             </li>
-            <li>
+            <li class="footer-sns-li">
               <a href="https://www.x.com" target="_blank">
-                <img src="img/ic_twitter.svg" />
+                <img class="footer-sns-ico" src="img/ic_twitter.svg" />
               </a>
             </li>
-            <li>
+            <li class="footer-sns-li">
               <a href="https://www.youtube.com" target="_blank">
-                <img src="img/ic_youtube.svg" />
+                <img class="footer-sns-ico" src="img/ic_youtube.svg" />
               </a>
             </li>
-            <li>
+            <li class="footer-sns-li">
               <a href="https://www.instagram.com" target="_blank">
-                <img src="img/ic_instagram.svg" />
+                <img class="footer-sns-ico" src="img/ic_instagram.svg" />
               </a>
             </li>
           </ul>
