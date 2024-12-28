@@ -274,13 +274,23 @@ footer {
   position: relative;
 }
 
-.pw-eye-icon {
+.pw-eye-icon-off {
   position: absolute;
   right: 24px;
   bottom: 40px;
 }
 
-.sign-email-error, .sign-nickname-error, .sign-pw-error, .sign-pwcheck-error {
+.pw-eye-icon-on {
+  display: none;
+  position: absolute;
+  right: 24px;
+  bottom: 40px;
+}
+
+.sign-email-error,
+.sign-nickname-error,
+.sign-pw-error,
+.sign-pwcheck-error {
   font-size: 14px;
   font-weight: 600;
   color: red;

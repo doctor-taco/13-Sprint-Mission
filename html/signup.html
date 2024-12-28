@@ -74,7 +74,16 @@
               class="sign-pw"
               onblur="checkPWCheck()"
             />
-            <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
+            <img
+              src="img/pwVisibilityOff.svg"
+              class="pw-eye-icon-off"
+              onclick="togglePWCheckVisibility('off1')"
+            />
+            <img
+              src="img/pwVisibilityOn.svg"
+              class="pw-eye-icon-on"
+              onclick="togglePWCheckVisibility('on1')"
+            />
           </div>
           <p class="sign-pw-error"></p>
 
@@ -90,11 +99,22 @@
               class="sign-pwcheck"
               onblur="checkPWCheck()"
             />
-            <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
+            <img
+              src="img/pwVisibilityOff.svg"
+              class="pw-eye-icon-off"
+              onclick="togglePWCheckVisibility('off2')"
+            />
+            <img
+              src="img/pwVisibilityOn.svg"
+              class="pw-eye-icon-on"
+              onclick="togglePWCheckVisibility('on2')"
+            />
           </div>
           <p class="sign-pwcheck-error"></p>
 
-          <button class="sign-box-submit" type="submit" disabled>회원가입</button>
+          <button class="sign-box-submit" type="submit" disabled>
+            회원가입
+          </button>
         </form>
         <div class="oauth-bar">
           <h2 class="oauth-bar-title">간편 로그인하기</h2>

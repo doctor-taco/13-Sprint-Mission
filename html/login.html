@@ -60,7 +60,16 @@
               class="sign-pw"
               onblur="checkPW()"
             />
-            <img src="img/btn_visibility_on_24px.svg" class="pw-eye-icon" />
+            <img
+              src="img/pwVisibilityOff.svg"
+              class="pw-eye-icon-off"
+              onclick="togglePWVisibility('off')"
+            />
+            <img
+              src="img/pwVisibilityOn.svg"
+              class="pw-eye-icon-on"
+              onclick="togglePWVisibility('on')"
+            />
           </div>
           <p class="sign-pw-error"></p>
 
