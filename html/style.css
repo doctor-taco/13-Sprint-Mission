@@ -280,6 +280,14 @@ footer {
   bottom: 40px;
 }
 
+.sign-email-error, .sign-nickname-error, .sign-pw-error, .sign-pwcheck-error {
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+  margin: -16px auto 24px 16px;
+  position: relative;
+}
+
 input:focus {
   outline-color: var(--blue);
 }
@@ -295,8 +303,13 @@ input:focus {
   color: var(--gray100);
 }
 
-.sign-box-submit:hover {
+.sign-box-submit:not(disabled):hover {
   background-color: var(--blue);
+}
+
+.sign-box-submit:disabled {
+  background-color: var(--gray400) !important;
+  cursor: not-allowed;
 }
 
 .oauth-bar {
