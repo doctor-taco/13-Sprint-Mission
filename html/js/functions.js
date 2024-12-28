@@ -132,3 +132,51 @@ function signup(event) {
     event.preventDefault();
     window.location.href = '/login';
 }
+
+function togglePWVisibility (status) {
+    let pw = document.getElementsByClassName('sign-pw')[0];
+    const off = document.getElementsByClassName('pw-eye-icon-off')[0];
+    const on = document.getElementsByClassName('pw-eye-icon-on')[0];
+
+    if (status === 'off') {
+        pw.type = 'text';
+        off.style.display = 'none';
+        on.style.display = 'block';
+    } else {
+        pw.type = 'password';
+        off.style.display = 'block';
+        on.style.display = 'none';
+    }
+}
+
+function togglePWCheckVisibility (status) {
+    let pw1 = document.getElementById('signup-pw');
+    let pw2 = document.getElementById('signup-pwcheck');
+    const imgOff1 = document.getElementsByClassName('pw-eye-icon-off')[0];
+    const imgOff2 = document.getElementsByClassName('pw-eye-icon-off')[1];
+    const imgOn1 = document.getElementsByClassName('pw-eye-icon-on')[0];
+    const imgOn2 = document.getElementsByClassName('pw-eye-icon-on')[1];
+
+    switch (status) {
+        case 'off1':
+            pw1.type = 'text';
+            imgOff1.style.display = 'none';
+            imgOn1.style.display = 'block';
+            break;
+        case 'off2':
+            pw2.type = 'text';
+            imgOff2.style.display = 'none';
+            imgOn2.style.display = 'block';
+            break;
+        case 'on1':
+            pw1.type = 'password';
+            imgOff1.style.display = 'block';
+            imgOn1.style.display = 'none';
+            break;
+        case 'on2':
+            pw2.type = 'password';
+            imgOff2.style.display = 'block';
+            imgOn2.style.display = 'none';
+            break;
+    }
+}
