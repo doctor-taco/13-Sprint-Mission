@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "ROKAF Sans";
+  src: url("./fonts/ROKAF\ Sans\ Medium.otf") format(".otf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: pretendard, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --blue: #3692ff;
+  --lightblue: #cfe5ff;
+  --gray50: #f9fafb;
+  --gray100: #f3f4f6;
+  --gray200: #e5e7eb;
+  --gray400: #9ca3af;
+  --gray500: #6b7280;
+  --gray600: #4b5563;
+  --gray700: #374151;
+  --gray800: #1f2937;
+  --gray900: #111827;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
 }
