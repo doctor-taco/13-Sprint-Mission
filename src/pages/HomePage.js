@@ -1,4 +1,4 @@
-import "../styles/style.css";
+import "../styles/HomePage.css";
 import Hero from "../images/Img_home_top.svg";
 import HotItem from "../images/Img_home_01.svg";
 import Search from "../images/Img_home_02.svg";

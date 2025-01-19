@@ -14,5 +14,8 @@ export default async function getProducts({
 
   const data = await response.json();
 
-  return data.list;
+  return {
+    list: data.list,
+    totalCount: data.totalCount,
+  };
 }

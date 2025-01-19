@@ -11,12 +11,12 @@ export default function BestItems() {
       try {
         setLoading(true);
         setError(null);
-        const fetchedProducts = await getProducts({
+        const { list } = await getProducts({
           page: 1,
           pageSize: 4,
           orderBy: "favorite",
         });
-        setProducts(fetchedProducts);
+        setProducts(list);
       } catch (e) {
         setError(e.message);
       } finally {

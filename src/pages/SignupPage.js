@@ -1,3 +1,4 @@
+import "../styles/LoginSignupPage.css";
 import Logo from "../images/pandaface.svg";
 import PWOff from "../images/pwVisibilityOff.svg";
 import PWOn from "../images/pwVisibilityOn.svg";
