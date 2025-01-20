@@ -9,9 +9,11 @@
 .itemsNav > li {
   display: inline-block;
   margin: auto 15px;
+}
+
+.itemsNavLinks {
   font-size: 18px;
   font-weight: 700;
-  color: var(--gray600);
 }
 
 .bestProdListMsg {

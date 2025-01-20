@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Logo from "../images/pandaface.svg";
-import Items from "../pages/ItemsPage";
 
 export default function Header() {
   const location = useLocation();
   const atItems = location.pathname === "/items";
+  const atFreeBoard = location.pathname === "/freeboard";
 
   return (
     <header>
@@ -21,14 +21,26 @@ export default function Header() {
             }}
           >
             <li>
-              <Link to={Items}>자유게시판</Link>
+              <a
+                href="../freeboard"
+                className="itemsNavLinks"
+                style={{
+                  color: atFreeBoard ? "var(--blue)" : "var(--grey600)",
+                }}
+              >
+                자유게시판
+              </a>
             </li>
-            <li
-              style={{
-                color: atItems ? "var(--blue)" : "var(--grey600)",
-              }}
-            >
-              <Link to={Items}>중고마켓</Link>
+            <li>
+              <a
+                href="../items"
+                className="itemsNavLinks"
+                style={{
+                  color: atItems ? "var(--blue)" : "var(--grey600)",
+                }}
+              >
+                중고마켓
+              </a>
             </li>
           </ul>
         </div>
