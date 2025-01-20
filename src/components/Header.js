@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Logo from "../images/pandaface.svg";
 
 export default function Header() {
@@ -21,26 +21,26 @@ export default function Header() {
             }}
           >
             <li>
-              <a
-                href="../freeboard"
-                className="itemsNavLinks"
+              <Link
+                to="../freeboard"
+                className="itemsNavLink"
                 style={{
-                  color: atFreeBoard ? "var(--blue)" : "var(--grey600)",
+                  color: atFreeBoard ? "var(--blue)" : "var(--gray600)",
                 }}
               >
                 자유게시판
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="../items"
-                className="itemsNavLinks"
+              <Link
+                to="."
+                className="itemsNavLink"
                 style={{
-                  color: atItems ? "var(--blue)" : "var(--grey600)",
+                  color: atItems ? "var(--blue)" : "var(--gray600)",
                 }}
               >
                 중고마켓
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

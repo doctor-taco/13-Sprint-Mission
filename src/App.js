@@ -4,6 +4,8 @@ import Home from "./pages/HomePage";
 import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
 import Items from "./pages/ItemsPage";
+import AddItem from "./pages/AddItemPage";
+import Freeboard from "./pages/FreeboardPage";
 import Privacy from "./pages/PrivacyPage";
 import Faq from "./pages/FaqPage";
 
@@ -15,6 +17,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="items" element={<Items />} />
+        <Route path="additem" element={<AddItem />} />
+        <Route path="freeboard" element={<Freeboard />} />
         <Route path="privacy" element={<Privacy />} />
         <Route path="faq" element={<Faq />} />
       </Routes>

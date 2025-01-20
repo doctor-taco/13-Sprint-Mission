@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import getProducts from "./api";
 import ToPrevImg from "../images/arrow_left.svg";
 import ToNextImg from "../images/arrow_right.svg";
@@ -135,7 +136,9 @@ export default function AllItems() {
               placeholder="검색할 상품을 입력해주세요"
             />
           </span>
-          <button className="regProdBtn">상품 등록하기</button>
+          <Link className="regProdBtn" to="../additem">
+            상품 등록하기
+          </Link>
           <select
             className="sortOrdSel"
             value={sortOrder}
