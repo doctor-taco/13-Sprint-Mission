@@ -68,6 +68,11 @@ header {
   align-items: center;
 }
 
+.header-logo-shopname {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
   width: 40px;
 }

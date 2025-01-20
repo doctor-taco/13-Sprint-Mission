@@ -9,9 +9,11 @@ export default function Header() {
   return (
     <header>
       <nav className="header-nav">
-        <a className="header-left" href="/">
-          <img className="header-logo" src={Logo} alt="Logo" />
-          <span className="header-shopname">판다마켓</span>
+        <div className="header-left">
+          <a className="header-logo-shopname" href="/">
+            <img className="header-logo" src={Logo} alt="Logo" />
+            <span className="header-shopname">판다마켓</span>
+          </a>
           <ul
             className="itemsNav"
             style={{
@@ -29,7 +31,7 @@ export default function Header() {
               <Link to={Items}>중고마켓</Link>
             </li>
           </ul>
-        </a>
+        </div>
         <a
           href="/login"
           style={{

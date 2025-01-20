@@ -18,6 +18,7 @@ export default function AllItems() {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [sortOrder, setSortOrder] = useState("recent");
 
   useEffect(() => {
     function handleResize() {
@@ -58,7 +59,7 @@ export default function AllItems() {
         const { list, totalCount } = await getProducts({
           page: currentPage,
           pageSize,
-          orderBy: "recent",
+          orderBy: sortOrder,
         });
 
         setProducts(list);
@@ -71,7 +72,7 @@ export default function AllItems() {
     };
 
     fetchProducts();
-  }, [currentPage, deviceWidth]);
+  }, [currentPage, deviceWidth, sortOrder]);
 
   if (loading) return <h2 className="allProdListMsg">리스트 가져오는 중...</h2>;
   if (error) return <h2 className="allProdListMsg">에러: {error}</h2>;
@@ -135,9 +136,15 @@ export default function AllItems() {
             />
           </span>
           <button className="regProdBtn">상품 등록하기</button>
-          <select className="sortOrdSel">
-            <option>최신순</option>
-            <option>좋아요순</option>
+          <select
+            className="sortOrdSel"
+            value={sortOrder}
+            onChange={(e) => {
+              setSortOrder(e.target.value);
+            }}
+          >
+            <option value="recent">최신순</option>
+            <option value="favorite">좋아요순</option>
           </select>
         </div>
       </div>
