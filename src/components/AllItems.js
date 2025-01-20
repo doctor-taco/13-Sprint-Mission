@@ -1,15 +1,37 @@
 import { useState, useEffect } from "react";
 import getProducts from "./api";
-import SearchIco from "../images/ic_search.svg";
 import ToPrevImg from "../images/arrow_left.svg";
 import ToNextImg from "../images/arrow_right.svg";
 
+function getDeviceWidth(width) {
+  if (width > 1199) return "desktop";
+  if (width > 767) return "tablet";
+  return "mobile";
+}
+
 export default function AllItems() {
   const [products, setProducts] = useState([]);
+  const [deviceWidth, setDeviceWidth] = useState(() =>
+    getDeviceWidth(window.innerWidth)
+  );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    function handleResize() {
+      const newDeviceWidth = getDeviceWidth(window.innerWidth);
+      setDeviceWidth((prevDeviceWidth) => {
+        if (prevDeviceWidth !== newDeviceWidth) {
+          return newDeviceWidth;
+        }
+        return prevDeviceWidth;
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,9 +39,25 @@ export default function AllItems() {
         setLoading(true);
         setError(null);
 
+        let pageSize;
+
+        switch (deviceWidth) {
+          case "desktop":
+            pageSize = 10;
+            break;
+          case "tablet":
+            pageSize = 6;
+            break;
+          case "mobile":
+            pageSize = 4;
+            break;
+          default:
+            pageSize = 10;
+        }
+
         const { list, totalCount } = await getProducts({
           page: currentPage,
-          pageSize: 10,
+          pageSize,
           orderBy: "recent",
         });
 
@@ -33,7 +71,7 @@ export default function AllItems() {
     };
 
     fetchProducts();
-  }, [currentPage]);
+  }, [currentPage, deviceWidth]);
 
   if (loading) return <h2 className="allProdListMsg">리스트 가져오는 중...</h2>;
   if (error) return <h2 className="allProdListMsg">에러: {error}</h2>;
@@ -85,14 +123,17 @@ export default function AllItems() {
 
   return (
     <>
-      <div className="itemsHead">
-        <h2 className="itemsTitle">전체 상품</h2>
+      <div className="itemsHead" id="itemsHeadAll">
+        <h2 className="itemsTitle" id="itemsTitleAll">
+          전체 상품
+        </h2>
         <div className="itemHead-Right">
-          <img className="searchIco" src={SearchIco} alt="" />
-          <input
-            className="searchInput"
-            placeholder="검색할 상품을 입력해주세요"
-          />
+          <span className="searchInAllItems">
+            <input
+              className="searchInput"
+              placeholder="검색할 상품을 입력해주세요"
+            />
+          </span>
           <button className="regProdBtn">상품 등록하기</button>
           <select className="sortOrdSel">
             <option>최신순</option>

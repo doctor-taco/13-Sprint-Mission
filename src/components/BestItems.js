@@ -1,21 +1,62 @@
 import { useState, useEffect } from "react";
 import getProducts from "./api";
 
+function getDeviceWidth(width) {
+  if (width > 1199) return "desktop";
+  if (width > 767) return "tablet";
+  return "mobile";
+}
+
 export default function BestItems() {
   const [products, setProducts] = useState([]);
+  const [deviceWidth, setDeviceWidth] = useState(() =>
+    getDeviceWidth(window.innerWidth)
+  );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    function handleResize() {
+      const newDeviceWidth = getDeviceWidth(window.innerWidth);
+      setDeviceWidth((prevDeviceWidth) => {
+        if (prevDeviceWidth !== newDeviceWidth) {
+          return newDeviceWidth;
+        }
+        return prevDeviceWidth;
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
         setError(null);
+
+        let pageSize;
+
+        switch (deviceWidth) {
+          case "desktop":
+            pageSize = 4;
+            break;
+          case "tablet":
+            pageSize = 2;
+            break;
+          case "mobile":
+            pageSize = 1;
+            break;
+          default:
+            pageSize = 4;
+        }
+
         const { list } = await getProducts({
           page: 1,
-          pageSize: 4,
+          pageSize,
           orderBy: "favorite",
         });
+
         setProducts(list);
       } catch (e) {
         setError(e.message);
@@ -25,7 +66,7 @@ export default function BestItems() {
     };
 
     fetchProducts();
-  }, []);
+  }, [deviceWidth]);
 
   if (loading)
     return <h1 className="bestProdListMsg">리스트 가져오는 중...</h1>;
@@ -33,8 +74,10 @@ export default function BestItems() {
 
   return (
     <>
-      <div className="itemsHead">
-        <h2 className="itemsTitle">베스트 상품</h2>
+      <div className="itemsHead" id="itemsHeadBest">
+        <h2 className="itemsTitle" id="itemsTitleBest">
+          베스트 상품
+        </h2>
       </div>
       <div className="itemsBest">
         <ul className="bestProdList">
