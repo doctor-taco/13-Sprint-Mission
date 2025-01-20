@@ -1,5 +1,6 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/pandaface.svg";
+import Items from "../pages/ItemsPage";
 
 export default function Header() {
   const location = useLocation();
@@ -17,13 +18,15 @@ export default function Header() {
               display: atItems ? "inline-block" : "none",
             }}
           >
-            <li>자유게시판</li>
+            <li>
+              <Link to={Items}>자유게시판</Link>
+            </li>
             <li
               style={{
                 color: atItems ? "var(--blue)" : "var(--grey600)",
               }}
             >
-              중고마켓
+              <Link to={Items}>중고마켓</Link>
             </li>
           </ul>
         </a>

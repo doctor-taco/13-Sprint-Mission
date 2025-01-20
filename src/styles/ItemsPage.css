@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  letter-spacing: -2px;
 }
 
 #itemsHeadBest {
@@ -152,6 +153,7 @@
   font-size: 16px;
   font-weight: 600;
   color: var(--gray100);
+  letter-spacing: -1px;
   background-color: var(--blue);
   border-radius: 8px;
   border: none;
@@ -167,6 +169,7 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--gray800);
+  letter-spacing: -1px;
   background-image: url(../images/ic_arrow_down.svg);
   background-repeat: no-repeat;
   background-size: 24px 24px;
